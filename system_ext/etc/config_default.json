@@ -1,0 +1,873 @@
+{
+    "DataLicense": "LicenseRef-Unisoc-General-1.0",
+    "DataCopyright": "2022-2023 Unisoc (Shanghai) Technologies Co., Ltd.",
+
+	"CaseList" :
+	[
+		{
+			"CaseID" : 1,
+			"Description" : "front/back auto capture and startup test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+        {
+			"CaseID" : 2,
+			"Description" : "front/back hdr mode on/off capture test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setHdrMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 4000},
+				{"ActionName" : "setHdrMode", "ActionParams" : [2], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 4000},
+				{"ActionName" : "setHdrMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 4000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setHdrMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 4000},
+				{"ActionName" : "setHdrMode", "ActionParams" : [2], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 4000},
+				{"ActionName" : "setHdrMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 4000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+
+			]
+		},
+		{
+			"CaseID" : 3,
+			"Description" : "video mode switch camera test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [5]},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 4,
+			"Description" : "switch DC DV test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [5]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [5]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 5,
+			"Description" : "video mode recode test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setVideoHDR", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setVideoBlur", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setBlurLevel", "ActionParams" : [10],"WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+				{"ActionName" : "setBlurLevel", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 6,
+			"Description" : "Refocus test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterRefocusMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setBlurLevel", "ActionParams" : [10],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setBlurLevel", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 7,
+			"Description" : "portrait test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [0],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setBlurLevel", "ActionParams" : [10],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setBlurLevel", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setBlurLevel", "ActionParams" : [0],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [0],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [0],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [0],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [0],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [0],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [0],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterRefocusMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [0],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setBlurLevel", "ActionParams" : [10],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setBlurLevel", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setBlurLevel", "ActionParams" : [0],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterRefocusMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterPortraitMode", "ActionParams" : [1],"WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 8,
+			"Description" : "night mode capture test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterNightMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterNightMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 9,
+			"Description" : "ultrares mode test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "setProp", "ExtraParams" : "persist.vendor.cam.back.high.res.zsl:0"},
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "setProp", "ExtraParams" : "persist.vendor.cam.back.high.res.zsl:1"},
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "setProp", "ExtraParams" : "persist.vendor.cam.back.high.res.zsl:2"},
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setProp", "ExtraParams" : "persist.vendor.cam.back.high.res.zsl:0"},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "setProp", "ExtraParams" : "persist.vendor.cam.front.high.res.zsl:0"},
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "setProp", "ExtraParams" : "persist.vendor.cam.front.high.res.zsl:1"},
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "setProp", "ExtraParams" : "persist.vendor.cam.front.high.res.zsl:2"},
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setProp", "ExtraParams" : "persist.vendor.cam.front.high.res.zsl:0"},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 10,
+			"Description" : "auto mode rear flash capture test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFlashMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifFlash"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFlashMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifFlash"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFlashMode", "ActionParams" : [3], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifFlash"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 11,
+			"Description" : "auto mode front flash capture test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFlashMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifFlash"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFlashMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifFlash"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFlashMode", "ActionParams" : [3], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifFlash"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 12,
+			"Description" : "video mode flash record test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFlashMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+
+				{"ActionName" : "setFlashMode", "ActionParams" : [2], "WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 13,
+			"Description" : "facebeauty test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFacebeautyLevel", "ActionParams" : [100,100,100,100,100,100,100,100,100], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFacebeautyLevel", "ActionParams" : [0,0,0,0,0,0,0,0,0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFacebeautyLevel", "ActionParams" : [100,100,100,100,100,100,100,100,100], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFacebeautyLevel", "ActionParams" : [0,0,0,0,0,0,0,0,0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 14,
+			"Description" : "ultrawide mode test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterWideMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterWideMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterWideMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterWideMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterWideMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 15,
+			"Description" : "pro mode test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterProMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setSaturation", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setSaturation", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setSaturation", "ActionParams" : [2], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setSaturation", "ActionParams" : [3], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setSaturation", "ActionParams" : [4], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setSaturation", "ActionParams" : [5], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setSaturation", "ActionParams" : [6], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+
+				{"ActionName" : "setContrast", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setContrast", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setContrast", "ActionParams" : [2], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setContrast", "ActionParams" : [3], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setContrast", "ActionParams" : [4], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setContrast", "ActionParams" : [5], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setContrast", "ActionParams" : [6], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+
+				{"ActionName" : "setMeteringMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setMeteringMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setMeteringMode", "ActionParams" : [2], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+
+				{"ActionName" : "setAWBCT", "ExtraParams" : "AwbmodeOff", "ActionParams" : [2800], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifWb"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setAWBCT", "ExtraParams" : "AwbmodeOff", "ActionParams" : [7000], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifWb"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setAWBCT", "ExtraParams" : "AwbmodeAuto", "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifWb"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setAWBCT", "ExtraParams" : "AwbmodeIncandescent", "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifWb"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setAWBCT", "ExtraParams" : "AwbmodeFluorescent", "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifWb"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setAWBCT", "ExtraParams" : "AwbmodeDaylight", "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifWb"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setAWBCT", "ExtraParams" : "AwbmodeCloudyDaylight", "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifWb"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+
+				{"ActionName" : "setExposureTime", "ActionParams" : [0.001], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifEt"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setExposureTime", "ActionParams" : [0.01], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifEt"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setExposureTime", "ActionParams" : [1.0], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifEt"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setExposureTime", "ActionParams" : [8.0], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifEt"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setExposureTime", "ActionParams" : [30.0], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifEt"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+
+				{"ActionName" : "setIso", "ActionParams" : [100], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifIso"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setIso", "ActionParams" : [3200], "WaitTime" : 2000},
+				{"ActionName" : "checkExif", "ExtraParams" : "exifIso"},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+
+				{"ActionName" : "setFocusDistance", "ActionParams" : [100], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFocusDistance", "ActionParams" : [5], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFocusDistance", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 16,
+			"Description" : "portrait distortion correction test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterWideMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setPortraitDistortionCorrect", "ActionParams" : [1]},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setPortraitDistortionCorrect", "ActionParams" : [0]},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setZoom", "ActionParams" : [0.6], "WaitTime" : 2000},
+				{"ActionName" : "setPortraitDistortionCorrect", "ActionParams" : [1]},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setPortraitDistortionCorrect", "ActionParams" : [0]},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 17,
+			"Description" : "eis test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setStabilizationMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setZoom", "ActionParams" : [9.0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setStabilizationMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterVideoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setStabilizationMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+				{"ActionName" : "setStabilizationMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 18,
+			"Description" : "logo & time watermark test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setWaterMark", "ActionParams" : [1,1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setWaterMark", "ActionParams" : [0,0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setWaterMark", "ActionParams" : [1,1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setWaterMark", "ActionParams" : [0,0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setWaterMark", "ActionParams" : [1,0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setWaterMark", "ActionParams" : [0,1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"},
+
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setWaterMark", "ActionParams" : [1,0], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setWaterMark", "ActionParams" : [0,1], "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 19,
+			"Description" : "filter test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "LightFilter", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "WaterFilter", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "HaloFilter", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "SoftWarmingFilter", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "EarlybirdFilter", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "Filmstock50Filter", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "HorrorBlueFilter", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "NashvilleFilter", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "CrispWinterFilter", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "BismuthFilter", "WaitTime" : 2000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterVideoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "WarmLBA75Filter", "WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterVideoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFilterMode", "ExtraParams" : "HistoryFilter", "WaitTime" : 2000},
+				{"ActionName" : "startRecording", "WaitTime" : 10000},
+				{"ActionName" : "stopRecording", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 20,
+			"Description" : "aiscene test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setAIScene","ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setAIScene","ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 21,
+			"Description" : "faceattribute test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterProMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterWideMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterUltraResMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterNightMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterNightMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setFaceAttribute","ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 22,
+			"Description" : "smile capture test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setSmileCapture", "ActionParams" : [1], "WaitTime" : 10000},
+				{"ActionName" : "setSmileCapture", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setSmileCapture", "ActionParams" : [1], "WaitTime" : 10000},
+				{"ActionName" : "setSmileCapture", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 23,
+			"Description" : "gesture capture test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setGestureDetect", "ActionParams" : [1], "WaitTime" : 10000},
+				{"ActionName" : "setGestureDetect", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 24,
+			"Description" : "touch ae af test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [0.5, 0.5], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [0.0, 0.0], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [0.0, 1.0], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [1.0, 0.0], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [1.0, 1.0], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [0.5, 0.5], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [0.0, 0.0], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [0.0, 1.0], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [1.0, 0.0], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [1.0, 1.0], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 25,
+			"Description" : "exposure compensation test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setEV", "ActionParams" : [-100], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setEV", "ActionParams" : [100], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "enterAutoMode", "ActionParams" : [1], "WaitTime" : 2000},
+				{"ActionName" : "setEV", "ActionParams" : [-100], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "setEV", "ActionParams" : [100], "WaitTime" : 1000},
+				{"ActionName" : "capture", "WaitTime" : 2000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		},
+		{
+			"CaseID" : 26,
+			"Description" : "check metadata test...",
+
+			"ActionList" : [
+				{"ActionName" : "enterProMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setTouchAeAf", "ActionParams" : [0.5, 0.5], "WaitTime" : 1000},
+				{"ActionName" : "setEV", "ActionParams" : [-100], "WaitTime" : 1000},
+				{"ActionName" : "checkPreviewResult", "ExtraParams" : "3aState,ev"},
+				{"ActionName" : "lockAeAf", "WaitTime" : 1000},
+				{"ActionName" : "checkPreviewResult", "ExtraParams" : "3aState,ev"},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterProMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setEV", "ActionParams" : [-100]},
+				{"ActionName" : "checkPreviewResult", "ExtraParams" : "ev"},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterProMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setExposureTime", "ActionParams" : [0.01]},
+				{"ActionName" : "checkPreviewResult", "ExtraParams" : "exposureTime"},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterProMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setFocusDistance", "ActionParams" : [100]},
+				{"ActionName" : "checkPreviewResult", "ExtraParams" : "focus"},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterProMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setAWBCT", "ExtraParams" : "AwbmodeFluorescent"},
+				{"ActionName" : "checkPreviewResult", "ExtraParams" : "whiteBalance"},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000},
+
+				{"ActionName" : "enterProMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setIso", "ActionParams" : [100]},
+				{"ActionName" : "checkPreviewResult", "ExtraParams" : "iso"},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000}
+			]
+		},
+		{
+			"CaseID" : 27,
+			"Description" : "burst capture...",
+
+			"ActionList" : [
+				{"ActionName" : "enterProMode", "ActionParams" : [0], "WaitTime" : 2000},
+				{"ActionName" : "setEVList", "ActionParams" : [-100, -50, 0, 50, 100], "WaitTime" : 1000},
+				{"ActionName" : "checkCaptureResult", "ExtraParams" : "evlist"},
+				{"ActionName" : "captureBurst", "WaitTime" : 1000},
+				{"ActionName" : "exitCamera", "WaitTime" : 2000}
+			]
+		},
+		{
+			"CaseID" : 100,
+			"Description" : "cts test...",
+
+			"ActionList" : [
+				{"ActionName" : "LoopStart", "ActionParams" : [1]},
+				{"ActionName" : "startCts", "ExtraParams" : "CaptureRequestTest#testAwbModeAndLock", "WaitTime" : 2000},
+				{"ActionName" : "startCts", "ExtraParams" : "CaptureRequestTest#testEdgeModeControl", "WaitTime" : 2000},
+				{"ActionName" : "startCts", "ExtraParams" : "CaptureRequestTest#testAeModeAndLock", "WaitTime" : 2000},
+				{"ActionName" : "startCts", "ExtraParams" : "CaptureRequestTest#testFlashControl", "WaitTime" : 2000},
+				{"ActionName" : "LoopEnd"}
+			]
+		}
+	]
+}
+

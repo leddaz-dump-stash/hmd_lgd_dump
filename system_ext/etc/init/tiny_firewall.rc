@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2016-2023 Unisoc (Shanghai) Technologies Co., Ltd
+# SPDX-License-Identifier: LicenseRef-Unisoc-General-1.0
+#enable dns filter
+service enable_dns /system_ext/bin/tiny_firewall.sh enable_dns
+    user root
+    disabled
+    oneshot
+
+#disable dns filter
+service disable_dns /system_ext/bin/tiny_firewall.sh disable_dns
+    user root
+    disabled
+    oneshot

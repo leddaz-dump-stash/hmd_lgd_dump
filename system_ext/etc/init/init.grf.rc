@@ -1,0 +1,4 @@
+# for grf, set grf props by init.grf.rc
+
+on property:ro.build.fingerprint=*
+    setprop ro.system.build.fingerprint ${ro.build.fingerprint}
