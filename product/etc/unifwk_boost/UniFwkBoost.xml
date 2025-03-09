@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unifwk_boost version="0">
+    <board name="common">
+        <mainswicth>1</mainswicth>
+        <feature name="uni_fwkboost_default">
+            <switch>1</switch>
+            <id>480</id>
+        </feature>
+        <feature name="uni_fwkboost_surfaceview">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_overscrool">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_textureview">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_touch">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_activity_start">
+            <switch>1</switch>
+            <id>600</id>
+        </feature>
+        <feature name="uni_fwkboost_activity_resume">
+            <switch>1</switch>
+            <id>600</id>
+        </feature>
+        <feature name="uni_fwkboost_activity_pause">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_activity_idle">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_activity_stop">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_animation_transition">
+            <switch>1</switch>
+            <id>400</id>
+        </feature>
+        <feature name="uni_fwkboost_animation_rotation">
+            <switch>1</switch>
+            <id>400</id>
+        </feature>
+        <feature name="uni_fwkboost_animation_startingwindow">
+            <switch>1</switch>
+            <id>400</id>
+        </feature>
+        <feature name="uni_fwkboost_animation_recents">
+            <switch>1</switch>
+            <id>400</id>
+        </feature>
+        <feature name="uni_fwkboost_animation_others">
+            <switch>1</switch>
+            <id>400</id>
+        </feature>
+        <feature name="uni_fwkboost_add_window">
+            <switch>0</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_process_create">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_view_layout">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_view_measure">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+        <feature name="uni_fwkboost_view_draw">
+            <switch>1</switch>
+            <id>500</id>
+        </feature>
+    </board>
+
+    <board name="ums9230">
+        <feature name="uni_fwkboost_surfaceview">
+            <switch>1</switch>
+            <id>550</id>
+        </feature>
+    </board>
+</unifwk_boost>

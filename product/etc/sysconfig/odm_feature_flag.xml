@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <feature name="com.google.android.feature.AER_OPTIMIZED" />
+    <!--Google lens-->
+    <feature name="com.google.lens.feature.CAMERA_INTEGRATION" />
+    <feature name="com.google.lens.feature.IMAGE_INTEGRATION" />
+    <!--Smart space-->
+    <feature name="com.google.android.googlequicksearchbox.SMARTSPACE_DEVICE_FEATURE" />
+    <feature name="com.google.android.googlequicksearchbox.OEM_AOD_SMARTSPACE" />
+    <feature name="com.google.android.googlequicksearchbox.OEM_SMARTSPACE_WIDGET" />
+    <!--HMD feature-->
+    <feature name="com.hmdglobal.android.feature.HMD_EXPERIENCE" />
+    <!--[SWR][GSW-018][LGD-463] XuYunlai modified for feature flags follow HMD requirement 2023-12-23 begin-->
+    <feature name="com.hmdglobal.android.feature.OZO_EXPERIENCE" />
+    <!--[SWR][GSW-018][LGD-463] XuYunlai modified for feature flags follow HMD requirement 2023-12-23 end-->
+    <feature name="com.hmdglobal.android.feature.YEAR2024" />
+</config>

@@ -1,0 +1,23 @@
+# Project name: LGR
+# Local skuid : 1HMWW
+# override system properties begin ###############
+
+# Device name, product name, model name for product
+ro.product.product.device=LGR
+ro.product.product.name=LegendPro_HMWW
+ro.product.product.model=M-KOPA X20
+
+# Fingerprint for product
+ro.product.build.fingerprint=HMD/LegendPro_00EEA/LGR:14/UP1A.231005.007/00WW_1_520:user/release-keys
+
+# ODM system properties part.
+ro.product.model.num=HMWW
+ro.product.board=LegendPro
+ro.product.nickname=M-KOPA X20
+
+# Google clientidbase
+ro.com.google.clientidbase.ms=android-hmd-terr1-rso2
+ro.com.google.clientidbase.vs=android-hmd-terr1-rso2
+ro.com.google.clientidbase.tx=android-hmd-terr1-rso2
+ro.com.google.clientidbase.pg=android-hmd-deo2
+# End of skuid system properties!

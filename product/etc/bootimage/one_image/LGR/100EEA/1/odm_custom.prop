@@ -1,0 +1,12 @@
+# Project name: LGR
+# Local skuid : 100EEA
+# override system properties begin ###############
+
+# Device name, product name, model name for bootimage
+ro.product.bootimage.device=LGR
+ro.product.bootimage.name=LegendPro_00EEA
+ro.product.bootimage.model=HMD Pulse Pro
+
+# Fingerprint for bootimage
+ro.bootimage.build.fingerprint=HMD/LegendPro_00EEA/LGR:14/UP1A.231005.007/00WW_1_520:user/release-keys
+# End of skuid system properties!

@@ -1,0 +1,23 @@
+# Project name: LGP
+# Local skuid : 100EEA
+# override system properties begin ###############
+
+# Device name, product name, model name for product
+ro.product.product.device=LGP
+ro.product.product.name=LegendPlus_00EEA
+ro.product.product.model=HMD Pulse Plus
+
+# Fingerprint for product
+ro.product.build.fingerprint=HMD/LegendPlus_00EEA/LGP:14/UP1A.231005.007/00WW_1_520:user/release-keys
+
+# ODM system properties part.
+ro.product.model.num=00EEA
+ro.product.board=LegendPlus
+ro.product.nickname=HMD Pulse+
+
+# Google clientidbase
+ro.com.google.clientidbase.ms=android-hmd-terr2-rso2
+ro.com.google.clientidbase.vs=android-hmd-terr2-rso2
+ro.com.google.clientidbase.tx=android-hmd-terr2-rso2
+ro.com.google.clientidbase.pg=android-hmd-deo2
+# End of skuid system properties!
