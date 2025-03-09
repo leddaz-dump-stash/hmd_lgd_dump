@@ -1,0 +1,9 @@
+vendor_boot.img.xz
+system/priv-app/HMDCamera/HMDCamera.apk.xz
+product/priv-app/Messages/Messages.apk.xz
+product/priv-app/Velvet/Velvet.apk.xz
+product/priv-app/GmsCore/GmsCore.apk.xz
+product/app/Gmail2/Gmail2.apk.xz
+product/app/Maps/Maps.apk.xz
+product/app/Photos/Photos.apk.xz
+product/app/WebViewGoogle/WebViewGoogle.apk.xz

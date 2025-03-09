@@ -1,0 +1,12 @@
+# Project name: LGD
+# Local skuid : 100EEA
+# override system properties begin ###############
+
+# Device name, product name, model name for system_dlkm
+ro.product.system_dlkm.device=LGD
+ro.product.system_dlkm.name=Legend_00EEA
+ro.product.system_dlkm.model=HMD Pulse
+
+# Fingerprint for system_dlkm
+ro.system_dlkm.build.fingerprint=HMD/Legend_00EEA/LGD:14/UP1A.231005.007/00WW_1_520:user/release-keys
+# End of skuid system properties!

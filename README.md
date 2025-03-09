@@ -1,0 +1,14 @@
+# ussi_Legend_arm64_full-user 14 UP1A.231005.007 00WW_1_520 release-keys
+- manufacturer: hmd global
+- platform: ums9230
+- codename: LGD
+- flavor: ussi_Legend_arm64_full-user
+- release: 14
+- id: UP1A.231005.007
+- incremental: 00WW_1_520
+- tags: release-keys
+- fingerprint: HMD/Legend_00EEA/LGD:13/TP1A.220624.014/00WW_1_520:user/release-keys
+- is_ab: true
+- brand: HMD
+- branch: ussi_Legend_arm64_full-user-14-UP1A.231005.007-00WW_1_520-release-keys
+- repo: hmd_lgd_dump
