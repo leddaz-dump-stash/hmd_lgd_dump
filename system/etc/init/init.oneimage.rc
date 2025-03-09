@@ -1,0 +1,111 @@
+# Copyright (C) 2012 The Android Open Source Project
+#
+# IMPORTANT: Do not create world writable files or directories.
+# This is a common source of Android security bugs.
+#
+
+on post-fs
+
+    setprop ro.product.model.display "${ro.boot.product.model.display}"
+    mount none /odm/one_image/${ro.boot.skuid}/product/priv-app       /product/priv-app/one_image bind rec
+    mount none /odm/one_image/${ro.boot.skuid}/product/app            /product/app/one_image bind rec
+    mount none /odm/one_image/${ro.boot.skuid}/product/preloadapp     /product/preloadapp/one_image bind rec
+
+on post-fs-data
+    mkdir /data/etc 0775 system system encryption=Require
+
+on property:ro.boot.skuid=100EEA && property:ro.boot.board_device=LGD && property:ro.boot.nfc_support=1
+    setprop ro.build.fingerprint "HMD/Legend_00EEA/LGD:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100WW && property:ro.boot.board_device=LGD && property:ro.boot.nfc_support=1
+    setprop ro.build.fingerprint "HMD/Legend_00WW/LGD:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100WW && property:ro.boot.board_device=LGD && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/Legend_0AWW/LGD:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=1HMWW && property:ro.boot.board_device=LGD && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/Legend_HMWW/LGD:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100EEA && property:ro.boot.board_device=LGP && property:ro.boot.nfc_support=1
+    setprop ro.build.fingerprint "HMD/LegendPlus_00EEA/LGP:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100WW && property:ro.boot.board_device=LGP && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/LegendPlus_0AWW/LGP:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100M0 && property:ro.boot.board_device=LGP && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/LegendPlus_0AM0/LGP:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100ZA && property:ro.boot.board_device=LGP && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/LegendPlus_0AZA/LGP:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100FD && property:ro.boot.board_device=LGP && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/LegendPlus_0AFD/LGP:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100EEA && property:ro.boot.board_device=LGR && property:ro.boot.nfc_support=1
+    setprop ro.build.fingerprint "HMD/LegendPro_00EEA/LGR:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100WW && property:ro.boot.board_device=LGR && property:ro.boot.nfc_support=1
+    setprop ro.build.fingerprint "HMD/LegendPro_00WW/LGR:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100WW && property:ro.boot.board_device=LGR && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/LegendPro_0AWW/LGR:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100M0 && property:ro.boot.board_device=LGR && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/LegendPro_0AM0/LGR:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100FD && property:ro.boot.board_device=LGR && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/LegendPro_0AFD/LGR:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=100ZA && property:ro.boot.board_device=LGR && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/LegendPro_0AZA/LGR:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid=1HMWW && property:ro.boot.board_device=LGR && property:ro.boot.nfc_support=0
+    setprop ro.build.fingerprint "HMD/LegendPro_HMWW/LGR:14/UP1A.231005.007/${ro.build.version.incremental}:${ro.build.type}/release-keys"
+
+on property:ro.boot.skuid="100M0"
+    mount none odm/one_image/100CUS/product/priv-app/DTIgnite/ /product/priv-app/DTIgnite/ bind rec
+
+on property:ro.boot.skuid="100FD"
+    mount none odm/one_image/100CUS/product/priv-app/PayJoyAccess/ /product/priv-app/PayJoyAccess/ bind rec
+
+on property:ro.boot.skuid="100ZA"
+    mount none odm/one_image/100CUS/product/priv-app/PayJoyAccess/ /product/priv-app/PayJoyAccess/ bind rec
+
+on property:ro.boot.skuid=*
+    mount none odm/hide_app odm/one_image bind rec
+
+on post-fs && property:ro.boot.efuse_status=0
+    mount none /odm/app/factoryapp/ /system/app/factoryapp/ bind rec
+
+on post-fs && property:ro.boot.efuse_status=1
+    mount none odm/hide_app odm/app bind rec
+
+on property:ro.boot.board_device=LGD && property:ro.boot.resource_chip=HMD
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_lgp/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_lgr/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_x2/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_x20/ bind rec
+
+on property:ro.boot.board_device=LGD && property:ro.boot.resource_chip=M-Kopa
+mount none odm/hide_app /system_ext/app/GmsSampleIntegration/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_lgp/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_lgr/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_x20/ bind rec
+
+on property:ro.boot.board_device=LGP
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_lgr/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_x2/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_x20/ bind rec
+
+on property:ro.boot.board_device=LGR && property:ro.boot.resource_chip=HMD
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_lgp/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_x2/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_x20/ bind rec
+
+on property:ro.boot.board_device=LGR && property:ro.boot.resource_chip=M-Kopa
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_lgp/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_lgr/ bind rec
+   mount none odm/hide_app /system_ext/app/GmsSampleIntegration_x2/ bind rec

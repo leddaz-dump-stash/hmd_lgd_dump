@@ -1,0 +1,12 @@
+#!/system/bin/sh
+cmd settings "$@"
+#[MBW][LGD][LGD-668] Allow configuring maximum charge percentage via secure setting by tanghao 2024/01/05 start
+if [ "${1}" == "put" ] && [ "${2}" == "secure" ] && [ "${3}" == "hmd_battery_max_charge_percentage" ] && [ "${4}" != "" ]
+    then
+      if [ $(echo ${4} | sed 's/[0-9]*/ /g' | sed 's/-/ /g')=" " ] &>/dev/null
+      then
+            echo ${4} > /sys/class/power_supply/battery/charger.0/hmd_battery_max_charge_percentage
+      else
+            echo "100" > /sys/class/power_supply/battery/charger.0/hmd_battery_max_charge_percentage
+    fi
+fi

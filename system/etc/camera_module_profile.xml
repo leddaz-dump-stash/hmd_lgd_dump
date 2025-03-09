@@ -1,0 +1,284 @@
+<!-- 请修改该配置文件后,集成到/system/etc/目录下面 -->
+<!-- 各个选项请不要修改对应的key值,只修改defaultValue的值,在取值范围内选取,设置取值范围之外的值则为无效值 -->
+<!-- v6t 整机标定 -->
+
+<CameraModuleProfile>
+    <!-- 预览宽度 -->
+    <!-- 取值范围：相机支持的预览宽度,默认为1920 -->
+    <Item>
+        <key>preview_width</key>
+        <defaultValue>640</defaultValue>
+    </Item>
+    <!-- 预览高度 -->
+    <!-- 取值范围：相机支持的预览高度,默认为1080 -->
+    <Item>
+        <key>preview_height</key>
+        <defaultValue>480</defaultValue>
+    </Item>
+    <!-- 拍照宽度 -->
+    <!-- 取值范围：相机支持的拍照宽度,默认为2560 -->
+    <Item>
+        <key>picture_width</key>
+        <defaultValue>2560</defaultValue>
+    </Item>
+    <!-- 拍照高度 -->
+    <!-- 取值范围：相机支持的拍照高度,默认为1920 -->
+    <Item>
+        <key>picture_height</key>
+        <defaultValue>1920</defaultValue>
+    </Item>
+    <!-- 主摄像头支持最大拍照宽度 -->
+    <!-- 取值范围：主摄像头支持最大拍照宽度,默认为1920 -->
+    <Item>
+        <key>main_max_picture_width</key>
+        <defaultValue>3264</defaultValue>
+    </Item>
+    <!-- 主摄像头支持最大拍照高度 -->
+    <!-- 取值范围：主摄像头支持的最大拍照高度,默认为1080 -->
+    <Item>
+        <key>main_max_picture_height</key>
+        <defaultValue>2448</defaultValue>
+    </Item>
+    <!-- 主摄像头支持最大拍照stide -->
+    <!-- 取值范围：主摄像头支持最大拍照stride,默认为1920 -->
+    <Item>
+        <key>main_max_picture_stride</key>
+        <defaultValue>3264</defaultValue>
+    </Item>
+    <!-- 副摄像头支持最大拍照宽度 -->
+    <!-- 取值范围：副摄像头支持最大拍照宽度,默认为1920 -->
+    <Item>
+        <key>sub_max_picture_width</key>
+        <defaultValue>1600</defaultValue>
+    </Item>
+    <!-- 副摄像头支持最大拍照高度 -->
+    <!-- 取值范围：副摄像头支持最大拍照高度,默认为1080 -->
+    <Item>
+        <key>sub_max_picture_height</key>
+        <defaultValue>1200</defaultValue>
+    </Item>
+	<!-- 副摄像头支持最大拍照stride -->
+    <!-- 取值范围：副摄像头支持最大拍照stride,默认为1920 -->
+    <Item>
+        <key>sub_max_picture_stride</key>
+        <defaultValue>1600</defaultValue>
+    </Item>
+    <!-- 旋转阈值 -->
+    <!-- 取值范围：允许的摄像头x轴旋转最大夹角,默认为2.0 -->
+    <Item>
+        <key>yaw_threshold</key>
+        <defaultValue>3</defaultValue>
+    </Item>
+	<!-- 旋转阈值 -->
+    <!-- 取值范围：允许的摄像头y轴旋转最大夹角,默认为2.0 -->
+    <Item>
+        <key>pitch_threshold</key>
+        <defaultValue>3</defaultValue>
+    </Item>
+	<!-- 旋转阈值 -->
+    <!-- 取值范围：允许的摄像头z轴旋转最大夹角,默认为2.0 -->
+    <Item>
+        <key>roll_threshold</key>
+        <defaultValue>3</defaultValue>
+    </Item>
+    <!-- 偏移阈值 -->
+    <!-- 取值范围：允许的摄像头x轴方向公差,默认为2.0 -->
+    <Item>
+        <key>shift_x_threshold</key>
+        <defaultValue>3</defaultValue>
+    </Item>
+	<!-- 偏移阈值 -->
+    <!-- 取值范围：允许的摄像头y轴方向公差,默认为2.0 -->
+    <Item>
+        <key>shift_y_threshold</key>
+        <defaultValue>3</defaultValue>
+    </Item>
+	<!-- 偏移阈值 -->
+    <!-- 取值范围：允许的摄像头z轴方向公差,默认为2.0 -->
+    <Item>
+        <key>shift_z_threshold</key>
+        <defaultValue>5</defaultValue>
+    </Item>
+    <!-- baseline -->
+    <!-- 取值范围：允许的双摄像头baseline,默认为10.0 -->
+    <Item>
+        <key>baseline</key>
+        <defaultValue>18.00</defaultValue>
+    </Item>
+    <!-- baseline_45_x -->
+    <!-- 取值范围：float (mm) （注意 : fixed） -->
+    <Item>
+        <key>baseline_45_x</key>
+        <defaultValue>18.00</defaultValue>
+    </Item>
+    <!-- baseline_45_y -->
+    <!-- 取值范围：float (mm) （注意 : fixed） -->
+    <Item>
+        <key>baseline_45_y</key>
+        <defaultValue>18.00</defaultValue>
+    </Item>
+    <!-- 标定板x方向角点个数 -->
+    <!-- 取值范围：标定板x方向角点个数, 4（老方法）,9（oneshot） -->
+    <Item>
+        <key>count_x</key>
+        <defaultValue>13</defaultValue>
+    </Item>
+    <!-- 标定板x方向角点个数 -->
+    <!-- 取值范围：标定板x方向角点个数, 14（老方法）,13（oneshot） -->
+    <Item>
+        <key>count_y</key>
+        <defaultValue>18</defaultValue>
+    </Item>
+    <!-- 圆角点大小 -->
+    <!-- 取值范围：圆角点大小 -->
+    <Item>
+        <key>square_size</key>
+        <defaultValue>15</defaultValue>
+    </Item>
+    <!-- 采样组数 -->
+    <!-- 取值范围：{1,5,9,10,18},默认为18 -->
+    <Item>
+        <key>sample_count</key>
+        <defaultValue>1</defaultValue>
+    </Item>
+    <!-- 双摄模组排列方向 -->
+    <!-- 取值范围： [0,1,2],默认为0表示水平，1表示竖直, 2表示斜 -->
+    <Item>
+        <key>module_orientation</key>
+        <defaultValue>1</defaultValue>
+    </Item>
+    <!-- 采用的畸变模型 -->
+    <!-- 取值范围： 畸变模型，可以是4/5/8 -->
+    <Item>
+        <key>module_distortion</key>
+        <defaultValue>5</defaultValue>
+    </Item>
+    <!-- 角点缩放策略 -->
+    <!-- 取值范围：[0,1],默认为0表示关闭，1表示打开 -->
+    <Item>
+        <key>mode_corners_scale</key>
+        <defaultValue>1</defaultValue>
+    </Item>
+    <!-- 两次采样间隔 -->
+    <!-- 取值范围：毫秒, 默认为2000 -->
+    <Item>
+        <key>pos_delay</key>
+        <defaultValue>2000</defaultValue>
+    </Item>
+    <!-- camera 0曝光补偿 -->
+    <!-- 取值范围：camera 0曝光补偿范围, 默认为0 -->
+    <Item>
+        <key>camer_0_exposurecompensation</key>
+        <defaultValue>0</defaultValue>
+    </Item>
+    <!-- camera 2曝光补偿 -->
+    <!-- 取值范围：camera 2曝光补偿范围, 默认为0 -->
+    <Item>
+        <key>camer_2_exposurecompensation</key>
+        <defaultValue>0</defaultValue>
+    </Item>
+    <!-- camera 0 fov -->
+    <!-- 取值范围：camera 0 fov -->
+    <Item>
+        <key>camer_0_fov</key>
+        <defaultValue>78</defaultValue>
+    </Item>
+    <!-- camera 2 fov -->
+    <!-- 取值范围：camera 2 fov -->
+    <Item>
+        <key>camer_2_fov</key>
+        <defaultValue>84</defaultValue>
+    </Item>
+    <!-- 深度图宽度 -->
+    <!-- 取值范围：固定 -->
+    <Item>
+        <key>depth_width</key>
+        <defaultValue>1024</defaultValue>
+    </Item>
+    <!-- 深度图高度 -->
+    <!-- 取值范围：固定 -->
+    <Item>
+        <key>depth_height</key>
+        <defaultValue>768</defaultValue>
+    </Item>
+    <!-- camera 0最大像素 -->
+    <!-- 取值范围：camera 0最大像素 -->
+    <Item>
+        <key>camer_0_resolution</key>
+        <defaultValue>3264X2448</defaultValue>
+    </Item>
+    <!-- camera 2最大像素 -->
+    <!-- 取值范围：camera 2最大像素 -->
+    <Item>
+        <key>camer_2_resolution</key>
+        <defaultValue>1600X1200</defaultValue>
+    </Item>
+    <!-- camera 0颜色 -->
+    <!-- 取值范围：camera 0颜色 -->
+    <Item>
+        <key>camer_0_color</key>
+        <defaultValue>RGB</defaultValue>
+    </Item>
+    <!-- camera 2颜色 -->
+    <!-- 取值范围：camera 2颜色 -->
+    <Item>
+        <key>camer_2_color</key>
+        <defaultValue>MONO</defaultValue>
+    </Item>
+    <!-- camera vertical error value -->
+    <!-- 取值范围：float -->
+    <Item>
+        <key>vertical_error_threshold</key>
+        <defaultValue>1</defaultValue>
+    </Item>
+    <!-- camera max depth error value -->
+    <!-- 取值范围：float -->
+    <Item>
+        <key>depth_error_max</key>
+        <defaultValue>750</defaultValue>
+    </Item>
+    <!-- camera min depth error value -->
+    <!-- 取值范围：float -->
+    <Item>
+        <key>depth_error_min</key>
+        <defaultValue>500</defaultValue>
+    </Item>
+    <!-- 调试模式 -->
+    <!-- 取值范围： [0,1],默认为0表示非调试模式，1表示调试模式 -->
+    <Item>
+        <key>is_debug</key>
+        <defaultValue>0</defaultValue>
+    </Item>
+    <!-- 老化模式 -->
+    <!-- 取值范围： [0,1],默认为0表示非老化模式，1表示老化模式 -->
+    <Item>
+        <key>is_aging_test</key>
+        <defaultValue>0</defaultValue>
+    </Item>
+	
+	<!-- 相机主摄id -->
+    <!-- 取值范围： [0,1...] -->
+    <Item>
+        <key>camera_main_id</key>
+        <defaultValue>0</defaultValue>
+    </Item>
+	
+	<!-- 相机副摄id -->
+    <!-- 取值范围： [0,1...] -->
+    <Item>
+        <key>camera_sub_id</key>
+        <defaultValue>2</defaultValue>
+    </Item>
+	
+	<Item>
+        <key>camera_use_api2</key>
+        <defaultValue>1</defaultValue>
+    </Item>
+	
+	<!-- eeprom文件路径 -->
+    <!-- 取值范围：文件路径,默认为null -->
+    <Item>
+        <key>data_path</key>
+        <defaultValue>/sdcard/Android/data/com.dualcam.calibration</defaultValue>
+    </Item>
+</CameraModuleProfile>

@@ -1,0 +1,330 @@
+<Config>
+    <ExpConfig id="0">
+        <!-- 项目识别码 -->
+        <productName>"LGR(Night tripod 0305)"</productName>
+        <dumpPreview>true</dumpPreview>
+        <dropFrame>true</dropFrame>
+
+        <!-- 曝光模式: 1，HDR；2，超级夜景 -->
+        <exposure_mode>2</exposure_mode>
+        <!-- 手动曝光配置参数 -->
+        <!-- adjustIsoPriority: EV+提亮优先增加ISO -->
+        <adjustIsoPriority>false</adjustIsoPriority>
+        <maxExp>8000000000</maxExp>
+        <maxSensitivity>400</maxSensitivity>
+        <minSensitivity>50</minSensitivity>
+
+        <!-- smooth曝光策略
+            "Ytarget":一幅画面的目标亮度，LOWLIGHT算法用，计算preview平均亮度，小于Ytarget把亮度提到Ytarget，大于Ytarget认为足够亮不需要提亮操作
+            "lowLightMeanYthr":LOWLIGHT_HDR算法提亮用，低亮部分平均亮度的threshold，统计得出低亮的平均亮度
+            "lowLighYtarget":LOWLIGHT_HDR算法提亮用，表示要把低亮的平均亮度提到此目标亮度，小于lowLighYtarget把亮度提到lowLighYtarget，大于lowLighYtarget认为足够亮不需要提亮操作
+        -->
+        <Ytarget>120</Ytarget>
+        <faceTarget>125</faceTarget>
+        <histLowLightThr>65</histLowLightThr>
+        <lowLighYtarget>55</lowLighYtarget>
+
+        <!-- 曝光策略
+            "brightenTimes": 提亮的基准倍数
+            "darkenTimes": 欠曝的变暗基准倍数
+        -->
+        <brightenTimes>1</brightenTimes>
+        <darkenTimes>1</darkenTimes>
+
+    </ExpConfig>
+    <!-- 多帧多曝光取帧与算法参数分段配置 -->
+    <!-- iso分段: 从小往大搜索，当前iso<=iso velue时，使用该分段的参数 -->
+    <!-- 对应iso段配置参数缺失时，使用最后一个iso段 -->
+    <!-- 需要针对人像场景单独区分参数时，可增加"_face"配置项，如"exposure_ev_face" -->
+    <!-- exposure_ev:
+        -100:该值不起作用，使用手动曝光exposure_time与exposure_iso
+        100:该帧为跳帧，不作为算法输入
+        正值:将算法提亮倍数乘以该值，并转换为该帧的EV值
+        负值:将算法欠爆倍数乘以该值，并转换为该帧的EV值
+        useCalcuEv为false时:以该值作为为EV值取帧
+        默认值为-100 -->
+    <!-- exposure_time:
+        exposure_ev为-100时该项生效
+        100:该帧为跳帧，不作为算法输入
+        正值:将算法提亮帧曝光时间乘以该值，得到该帧的曝光时间
+        负值:将算法欠爆帧曝光时间乘以该值，得到该帧的曝光时间 -->
+    <!-- exposure_iso:
+        exposure_ev为-100时该项生效
+        100:该帧为跳帧，不作为算法输入
+        正值:将算法提亮帧ISO乘以该值，得到该帧的ISO
+        负值:将算法欠爆帧ISO乘以该值，得到该帧的ISO -->
+    <!-- baseIndex: 算法baseIndex, 需要减去跳帧数 -->
+    <!-- max_times: 提亮帧最大提亮倍数 -->
+    <!-- min_times: 欠爆帧最大压暗倍数 -->
+    <!-- hdr_sceneType: 0，室外模式；1，室内模式；2，夜景模式 -->
+    <!-- hdr_deghostStrength: HDR去鬼影的强度，值越大，去鬼影越强，降噪越弱，取值范围[0.0, 1.0]，默认为0.7, 对于高ISO的场景，设置小于0.7的值对噪点有改善 -->
+    <!-- hdr_autoEnhancement: HDR自动增强处理，取值范围0或者1，默认为0 -->
+    <!-- mfnr_deghostStrength: mfnr去鬼影的强度，值越大，去鬼影越强，降噪越弱，取值范围[0.0, 1.0]，默认为0.2 -->
+    <!-- mfnr_chromaNrEnable: mfnr降彩噪开关，取值范围0或者1，默认为0，仅在相同曝光降噪时生效 -->
+    <!-- sharpness: 边缘增强强度系数，取值范围[0.0, 1.0]，默认为0，建议值0.3-0.5，对多帧合成后的单帧做处理 -->
+    <!-- saturation: 饱和度增强强度系数，取值范围[1.0, 1.5]，默认为1.0，对多帧合成后的单帧做处理 -->
+    <!-- contrast: 对比度增强强度系数，取值范围[0.0, 1.0]，默认为0.0 -->
+    <!-- chromaNrStrength: 降彩噪强度系数，取值范围[0.0, 1.0]，默认为0，建议值0.2-0.6，对多帧合成后的单帧做处理 -->
+    <!-- tmoStrength: HDR亮度增强，取值范围[0.0, 1.0]，默认为0，建议低iso段设为0.3 -->
+    <HdrParam id="0">
+        <!-- 室外场景 -->
+        <!-- 室内场景 -->
+        <!-- 较暗场景 -->
+        <hdr_iso value="400">
+            <exposure_time>102;4;4;4;102;-0.25;-0.25;102;-0.25</exposure_time>
+            <exposure_iso>102;0.25;0.25;0.25;102;-4;-4;102;-16</exposure_iso>
+            <baseIndex>2</baseIndex>
+            <max_times>2</max_times>
+            <min_times>26</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1.15</saturation>
+            <saturation_face>1.05</saturation_face>
+            <contrast>0.2</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0.2</tmoStrength>
+            <lowLighYtarget>55</lowLighYtarget>
+            <DR>1200</DR>
+        </hdr_iso>
+        <hdr_iso value="400">
+            <exposure_time>102;4;4;4;102;-0.25;-0.25;102;-0.25</exposure_time>
+            <exposure_iso>102;0.25;0.25;0.25;102;-4;-4;102;-24</exposure_iso>
+            <baseIndex>2</baseIndex>
+            <max_times>2</max_times>
+            <min_times>36</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1.15</saturation>
+            <saturation_face>1.05</saturation_face>
+            <contrast>0.2</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0.2</tmoStrength>
+            <lowLighYtarget>55</lowLighYtarget>
+            <DR>3000</DR>
+        </hdr_iso>
+        <hdr_iso value="800">
+            <exposure_time>102;8;8;8;102;-0.25;-0.25;102;-0.25</exposure_time>
+            <exposure_iso>102;0.125;0.125;0.125;102;-4;-4;102;-16</exposure_iso>
+            <baseIndex>2</baseIndex>
+            <max_times>2</max_times>
+            <min_times>28</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1.15</saturation>
+            <saturation_face>1.05</saturation_face>
+            <contrast>0.2</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0.2</tmoStrength>
+            <lowLighYtarget>55</lowLighYtarget>
+            <DR>1200</DR>
+        </hdr_iso>
+        <hdr_iso value="800">
+            <exposure_time>102;8;8;8;102;-0.25;-0.25;102;-0.25</exposure_time>
+            <exposure_iso>102;0.125;0.125;0.125;102;-4;-4;102;-28</exposure_iso>
+            <baseIndex>2</baseIndex>
+            <max_times>2</max_times>
+            <min_times>40</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1.15</saturation>
+            <saturation_face>1.05</saturation_face>
+            <contrast>0.2</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0.2</tmoStrength>
+            <lowLighYtarget>55</lowLighYtarget>
+            <DR>3000</DR>
+        </hdr_iso>
+        <hdr_iso value="1600">
+            <exposure_time>102;16;16;16;102;-0.25;-0.25;102;-0.25</exposure_time>
+            <exposure_iso>102;0.0625;0.0625;0.0625;102;-4;-4;102;-20</exposure_iso>
+            <baseIndex>2</baseIndex>
+            <max_times>2</max_times>
+            <min_times>28</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1.15</saturation>
+            <saturation_face>1.05</saturation_face>
+            <contrast>0.2</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0.2</tmoStrength>
+            <lowLighYtarget>55</lowLighYtarget>
+            <DR>1500</DR>
+        </hdr_iso>
+        <hdr_iso value="1600">
+            <exposure_time>102;16;16;16;102;-0.25;-0.25;102;-0.25</exposure_time>
+            <exposure_iso>102;0.0625;0.0625;0.0625;102;-4;-4;102;-32</exposure_iso>
+            <baseIndex>2</baseIndex>
+            <max_times>2</max_times>
+            <min_times>40</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1.15</saturation>
+            <saturation_face>1.0</saturation_face>
+            <contrast>0.2</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0.2</tmoStrength>
+            <lowLighYtarget>55</lowLighYtarget>
+            <DR>8000</DR>
+        </hdr_iso>
+        <hdr_iso value="3200">
+            <exposure_time>102;16;16;16;102;-0.25;-0.25;102;-0.25</exposure_time>
+            <exposure_iso>102;0.0625;0.0625;0.0625;102;-4;-4;102;-20</exposure_iso>
+            <baseIndex>2</baseIndex>
+            <max_times>2</max_times>
+            <min_times>28</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1.15</saturation>
+            <saturation_face>1.05</saturation_face>
+            <contrast>0.3</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0.2</tmoStrength>
+            <lowLighYtarget>55</lowLighYtarget>
+            <DR>1500</DR>
+        </hdr_iso>
+        <hdr_iso value="3200">
+            <exposure_time>102;16;16;16;102;-0.25;-0.25;102;-0.25</exposure_time>
+            <exposure_iso>102;0.0625;0.0625;0.0625;102;-4;-4;102;-32</exposure_iso>
+            <baseIndex>2</baseIndex>
+            <max_times>2</max_times>
+            <min_times>40</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1.15</saturation>
+            <saturation_face>1.0</saturation_face>
+            <contrast>0.3</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0.2</tmoStrength>
+            <lowLighYtarget>55</lowLighYtarget>
+            <DR>8000</DR>
+        </hdr_iso>
+        <hdr_iso value="6400">
+            <exposure_time>102;20;20;20;102;-0.2;-0.2;102;-0.2</exposure_time>
+            <exposure_iso>102;0.04;0.04;0.04;102;-5;-5;102;-25</exposure_iso>
+            <baseIndex>2</baseIndex>
+            <max_times>2</max_times>
+            <min_times>28</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1</saturation>
+            <saturation_face>1</saturation_face>
+            <contrast>0.3</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0.2</tmoStrength>
+            <Ytarget>95</Ytarget>
+            <lowLighYtarget>50</lowLighYtarget>
+            <DR>1200</DR>
+        </hdr_iso>
+        <hdr_iso value="6400">
+            <exposure_time>102;20;20;20;102;-0.2;-0.2;102;-0.2</exposure_time>
+            <exposure_iso>102;0.04;0.04;0.04;102;-5;-5;102;-40</exposure_iso>
+            <baseIndex>2</baseIndex>
+            <max_times>2</max_times>
+            <min_times>40</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1</saturation>
+            <saturation_face>1</saturation_face>
+            <contrast>0.3</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0</tmoStrength>
+            <Ytarget>90</Ytarget>
+            <lowLighYtarget>50</lowLighYtarget>
+            <DR>8000</DR>
+        </hdr_iso>
+        <hdr_iso value="14800">
+            <exposure_time>102;22;22;22;22;102;-0.2;-0.2;102;-0.2</exposure_time>
+            <exposure_iso>102;0.03;0.03;0.03;0.03;102;-6;-6;102;-25</exposure_iso>
+            <baseIndex>3</baseIndex>
+            <max_times>2</max_times>
+            <min_times>28</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1</saturation>
+            <saturation_face>1</saturation_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <contrast>0.3</contrast>
+            <contrast_face>0</contrast_face>
+            <Ytarget>80</Ytarget>
+            <lowLighYtarget>42</lowLighYtarget>
+            <DR>1500</DR>
+        </hdr_iso>
+        <hdr_iso value="14800">
+            <exposure_time>102;22;22;22;22;102;-0.2;-0.2;102;-0.2</exposure_time>
+            <exposure_iso>102;0.03;0.03;0.03;0.03;102;-5;-5;102;-35</exposure_iso>
+            <baseIndex>3</baseIndex>
+            <max_times>2</max_times>
+            <min_times>40</min_times>
+            <hdr_sceneType>2</hdr_sceneType>
+            <hdr_deghostStrength>0.5</hdr_deghostStrength>
+            <mfnr_deghostStrength>0.1</mfnr_deghostStrength>
+            <mfnr_deghostStrength_face>0</mfnr_deghostStrength_face>
+            <mfnr_chromaNrEnable>1</mfnr_chromaNrEnable>
+            <sharpness>0.4</sharpness>
+            <saturation>1</saturation>
+            <saturation_face>1</saturation_face>
+            <contrast>0.3</contrast>
+            <contrast_face>0</contrast_face>
+            <chromaNrStrength>0.1</chromaNrStrength>
+            <tmoStrength>0</tmoStrength>
+            <Ytarget>80</Ytarget>
+            <lowLighYtarget>42</lowLighYtarget>
+            <DR>8000</DR>
+        </hdr_iso>
+        <!-- 极暗场景 -->
+    </HdrParam>
+</Config>

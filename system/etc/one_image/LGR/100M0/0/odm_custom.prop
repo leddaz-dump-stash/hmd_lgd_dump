@@ -1,0 +1,16 @@
+# Project name: LGR
+# Local skuid : 100M0
+# override system properties begin ###############
+
+# Device name, product name, model name for system
+ro.product.system.device=LGR
+ro.product.system.name=LegendPro_0AM0
+ro.product.system.model=HMD Pulse Pro
+
+# Fingerprint for system
+ro.system.build.fingerprint=HMD/LegendPro_00EEA/LGR:14/UP1A.231005.007/00WW_1_520:user/release-keys
+
+# Extra system partition properties part.
+ro.build.product=LGR
+ro.build.product.name=LegendPro_0AM0
+# End of skuid system properties!
