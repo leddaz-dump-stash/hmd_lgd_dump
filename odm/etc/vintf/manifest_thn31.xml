@@ -1,0 +1,32 @@
+<!--
+    Input:
+        manifest_thn31.xml
+-->
+<manifest version="5.0" type="device" target-level="7">
+    <hal format="hidl">
+        <name>android.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.2::INfc/default</fqname>
+    </hal>
+    <hal format="aidl" override="true">
+        <name>vendor.sprd.hardware.soter</name>
+    </hal>
+    <hal format="aidl" override="true">
+        <name>vendor.sprd.hardware.tui</name>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.tms.tmsnfc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITmsNfc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ITmsNfc/default</fqname>
+    </hal>
+</manifest>

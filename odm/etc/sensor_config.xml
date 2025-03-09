@@ -1,0 +1,290 @@
+  <root>
+  <!-->
+  sensor id 0  LGP
+  <-->
+     <CameraModuleCfg>
+        <SlotId>0</SlotId>
+        <SensorName>hi5022</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>55</Resource_cost>
+        <SensorRole>dualcam_master</SensorRole>
+        <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0xa0</I2cAddr>
+                <E2promNum>3</E2promNum>
+                <E2promSize>16384</E2promSize>
+            </E2prom>
+        </OTP>
+
+        <VCM>
+            <AfName>dw9800</AfName>
+            <Mode>0</Mode>
+        </VCM>
+
+        <TuningParameter>
+            <TuningName>hi5022</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+
+
+  <!-->
+  sensor id 0 LGD
+  <-->
+     <CameraModuleCfg>
+        <SlotId>0</SlotId>
+        <SensorName>ov13b10</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>55</Resource_cost>
+        <SensorRole>dualcam_master</SensorRole>
+        <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0xa0</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>8192</E2promSize>
+            </E2prom>
+        </OTP>
+
+        <VCM>
+            <AfName>dw9714p</AfName>
+            <Mode>0</Mode>
+        </VCM>
+
+        <TuningParameter>
+            <TuningName>ov13b10</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+
+
+    
+  <!-->
+  sensor id 0 LGD  ECN1
+  <-->
+     <CameraModuleCfg>
+        <SlotId>0</SlotId>
+        <SensorName>ov13b10_2</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>55</Resource_cost>
+        <SensorRole>dualcam_master</SensorRole>
+        <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0xa2</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>8192</E2promSize>
+            </E2prom>
+        </OTP>
+
+        <VCM>
+            <AfName>dw9714p</AfName>
+            <Mode>0</Mode>
+        </VCM>
+
+        <TuningParameter>
+            <TuningName>ov13b10_2</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+
+
+  <!-->
+  sensor id 0 LGR  ECN1
+  <-->
+     <CameraModuleCfg>
+        <SlotId>0</SlotId>
+        <SensorName>ov50c40</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>55</Resource_cost>
+        <SensorRole>dualcam_master</SensorRole>
+        <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0xb0</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>16384</E2promSize>
+            </E2prom>
+        </OTP>
+
+        <VCM>
+            <AfName>pd9402A</AfName>
+            <Mode>0</Mode>
+        </VCM>
+
+        <TuningParameter>
+            <TuningName>ov50c40</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>   
+
+   <!-->
+  sensor id 1
+  <-->
+      <CameraModuleCfg>
+        <SlotId>1</SlotId>
+        <SensorName>hi5022f</SensorName>
+        <Facing>FRONT</Facing>
+        <Orientation>270</Orientation>
+        <Resource_cost>100</Resource_cost>
+
+         <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0xa4</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>16384</E2promSize>
+            </E2prom>
+        </OTP>
+     
+        <TuningParameter>
+            <TuningName>hi5022f</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+
+
+   
+   <!-->
+  sensor id 1  LGR  ECN1
+  <-->
+      <CameraModuleCfg>
+        <SlotId>1</SlotId>
+        <SensorName>ov50d40</SensorName>
+        <Facing>FRONT</Facing>
+        <Orientation>270</Orientation>
+        <Resource_cost>100</Resource_cost>
+
+         <OTP>
+            <E2prom>
+                <OtpName>ov50d40</OtpName>
+                <I2cAddr>0xa0</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>16384</E2promSize>
+            </E2prom>
+        </OTP>
+     
+        <TuningParameter>
+            <TuningName>ov50d40</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+
+    
+
+  <!-->
+  sensor id 1 
+  <-->
+      <CameraModuleCfg>
+        <SlotId>1</SlotId>
+        <SensorName>gc08a3</SensorName>
+        <Facing>FRONT</Facing>
+        <Orientation>270</Orientation>
+        <Resource_cost>100</Resource_cost>
+         <OTP>
+            <E2prom>
+                <OtpName>gc08a3_common</OtpName>
+                <I2cAddr>0x20</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>8192</E2promSize>
+            </E2prom>
+        </OTP>
+        <TuningParameter>
+            <TuningName>gc08a3</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+
+
+    <!-->
+  sensor id 1 
+  <-->
+      <CameraModuleCfg>
+        <SlotId>1</SlotId>
+        <SensorName>gc08a3_LH</SensorName>
+        <Facing>FRONT</Facing>
+        <Orientation>270</Orientation>
+        <Resource_cost>100</Resource_cost>
+         <OTP>
+            <E2prom>
+                <OtpName>gc08a3_LH_common</OtpName>
+                <I2cAddr>0x20</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>8192</E2promSize>
+            </E2prom>
+        </OTP>
+        <TuningParameter>
+            <TuningName>gc08a3_LH</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+  <!-->
+  sensor id 1  ecn2
+  <-->
+  
+      <CameraModuleCfg>
+        <SlotId>1</SlotId>
+        <SensorName>mt815</SensorName>
+        <Facing>FRONT</Facing>
+        <Orientation>270</Orientation>
+        <Resource_cost>100</Resource_cost>
+          <OTP>
+            <E2prom>
+                <OtpName>general</OtpName>
+                <I2cAddr>0xa0</I2cAddr>
+                <E2promNum>0</E2promNum>
+                <E2promSize>16384</E2promSize>
+            </E2prom>
+        </OTP> 
+        <TuningParameter>
+            <TuningName>mt815</TuningName>
+        </TuningParameter>
+      </CameraModuleCfg>
+
+
+  <!-->
+  sensor id 2
+  <-->
+    <CameraModuleCfg>
+        <SlotId>2</SlotId>
+        <SensorName>gc02m1</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>45</Resource_cost>
+        <SensorRole>dualcam_slave</SensorRole>
+        
+        <TuningParameter>
+            <TuningName>gc02m1</TuningName>
+        </TuningParameter>
+     </CameraModuleCfg>
+
+     <!-->
+  sensor id 2
+  <-->
+    <CameraModuleCfg>
+        <SlotId>2</SlotId>
+        <SensorName>gc02m1_2</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>45</Resource_cost>
+        <SensorRole>dualcam_slave</SensorRole>
+        
+        <TuningParameter>
+            <TuningName>gc02m1_2</TuningName>
+        </TuningParameter>
+     </CameraModuleCfg>
+
+    <!-->
+    sensor id 2
+    <-->
+    <CameraModuleCfg>
+        <SlotId>2</SlotId>
+        <SensorName>gc6133</SensorName>
+        <Facing>BACK</Facing>
+        <Orientation>90</Orientation>
+        <Resource_cost>45</Resource_cost>
+        <!-- Added by Qinjinke@sagereal.com for LGD-1439 Camera Covered 20231205 Begin -->
+        <SensorRole>dualcam_vga</SensorRole>
+        <!-- Added by Qinjinke@sagereal.com for LGD-1439 Camera Covered 20231205 End -->
+     </CameraModuleCfg>
+  <!-->
+  sensor id 3
+  <-->
+  </root>

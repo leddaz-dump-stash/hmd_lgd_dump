@@ -1,0 +1,125 @@
+{
+    "DataLicense": "LicenseRef-Unisoc-General-1.0",
+    "DataCopyright": "2023 Unisoc (Shanghai) Technologies Co., Ltd.",
+    "id": "TargetBoard",
+    "usecase": {
+        "TargetList": [
+            {
+                "name": "TARGET_BOARD_GC5035_MIRROR_HV",
+                "value": "true"
+            },
+
+            {
+                "name": "TARGET_BOARD_CAMERA_4IN1",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_CAMERA_SENSOR_CCT",
+                "value": "sensorHub"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_FLASH_LED_0",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_FLASH_LED_1",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_FRONT_CAMERA_FLASH_TYPE",
+                "value": "lcd"
+            },
+            {
+                "name": "CAMERA_TORCH_LIGHT_LEVEL",
+                "value": "16"
+            },
+
+            {
+                "name": "TARGET_BOARD_SPRD_FD_VERSION",
+                "value": "v1"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_HDR_CAPTURE",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_SUPPORT_AUTO_HDR",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_PORTRAIT_SINGLE_SUPPORT",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_AFBC_ENABLE",
+                "value": "false"
+            },
+            {
+                "name": "TARGET_BOARD_LOGOWATERMARK_SUPPORT",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_TIMEWATERMARK_SUPPORT",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_ZOOM_FACTOR_SUPPORT",
+                "value": "z4"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_GESTURE_DETECT",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_GYRO",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_FACE_UNLOCK_SUPPORT",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_3D_FACE_UNLOCK_SUPPORT",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_BOKEH_MODE_SUPPORT",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_BOKEH_HDR_MODE_SUPPORT",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_PORTRAIT_SUPPORT",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_DEPTH_DECRYPT",
+                "value": "true"
+            },
+
+            {
+                "name": "CONFIG_CAMERA_MM_DVFS_SUPPORT",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_MANUAL_SENSOR",
+                "value": "true"
+            },
+
+            {
+                "name": "TARGET_BOARD_CAMERA_GRALLOC1_USAGE_PRIVATE_17",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_BEAUTY_FOR_SHARKL5PRO",
+                "value": "true"
+            },
+            {
+                "name": "TARGET_BOARD_CAMERA_2K_VIDEO_ROT",
+                "value": "false"
+            }
+        ]
+    }
+}

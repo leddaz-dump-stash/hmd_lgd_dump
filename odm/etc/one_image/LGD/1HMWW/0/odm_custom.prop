@@ -1,0 +1,12 @@
+# Project name: LGD
+# Local skuid : 1HMWW
+# override system properties begin ###############
+
+# Device name, product name, model name for odm
+ro.product.odm.device=LGD
+ro.product.odm.name=Legend_HMWW
+ro.product.odm.model=M-KOPA X2
+
+# Fingerprint for odm
+ro.odm.build.fingerprint=HMD/Legend_00EEA/LGD:14/UP1A.231005.007/00WW_1_520:user/release-keys
+# End of skuid system properties!
