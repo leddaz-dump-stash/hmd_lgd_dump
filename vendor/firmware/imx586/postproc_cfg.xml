@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: 2022-2023 Unisoc (Shanghai) Technologies Co., Ltd
+SPDX-License-Identifier: LicenseRef-Unisoc-General-1.0
+
+Copyright 2022-2023 Unisoc (Shanghai) Technologies Co., Ltd.
+Licensed under the Unisoc General Software License, version 1.0 (the License);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+https://www.unisoc.com/en_us/license/UNISOC_GENERAL_LICENSE_V1.0-EN_US
+Software distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OF ANY KIND, either express or implied.
+See the Unisoc General Software License, version 1.0 for more details.
+-->
+<postproc_cfg>
+    <sensor_name>imx586</sensor_name>
+    <versionid>0x000C0019</versionid>
+    <scenario_num>42</scenario_num>
+    <scenario alia="com">
+        <id>0x0000000000000000</id>
+        <postprocfile_num>7</postprocfile_num>
+        <postprocfile name="USD_param.xml">
+            <param>com</param>
+        </postprocfile>
+        <postprocfile name="dpf.xml">
+            <param>com</param>
+        </postprocfile>
+        <postprocfile name="mfnr3.xml">
+            <param>com</param>
+        </postprocfile>
+        <postprocfile name="mfnr5.2.xml">
+            <param>com</param>
+        </postprocfile>
+        <postprocfile name="mfnr_sd.xml">
+            <param>com</param>
+        </postprocfile>
+        <postprocfile name="mfsr.xml">
+            <param>com</param>
+        </postprocfile>
+        <postprocfile name="xdr.xml">
+            <param>com</param>
+        </postprocfile>
+    </scenario>
+    <scenario alia="prv1">
+        <id>0x0000020000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="prv2">
+        <id>0x0000030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="cap0">
+        <id>0x0000050000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="cap1">
+        <id>0x0000060000000000</id>
+        <postprocfile_num>1</postprocfile_num>
+        <postprocfile name="mfnr5.2.xml">
+            <param>cap1</param>
+        </postprocfile>
+    </scenario>
+    <scenario alia="video1">
+        <id>0x00000A0000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="video2">
+        <id>0x00000B0000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="video3_sm120">
+        <id>0x00000C0800000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="prv1_night">
+        <id>0x0000020100000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="prv2_night">
+        <id>0x0000030100000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="cap1_night">
+        <id>0x0000060100000000</id>
+        <postprocfile_num>1</postprocfile_num>
+        <postprocfile name="mfnr3.xml">
+            <param>cap1_night</param>
+        </postprocfile>
+    </scenario>
+    <scenario alia="cap1_hdr">
+        <id>0x0000060001000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="cap1_flash">
+        <id>0x0000060002000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="video2_eis">
+        <id>0x00000B0003000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="prv1_zoom2x">
+        <id>0x0000020000000002</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="cap1_zoom2x">
+        <id>0x0000060000000002</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="cap1_bokeh">
+        <id>0x0000060200000000</id>
+        <postprocfile_num>1</postprocfile_num>
+        <postprocfile name="mfnr5.2.xml">
+            <param>cap1_bokeh</param>
+        </postprocfile>
+    </scenario>
+    <scenario alia="cap1_portrait">
+        <id>0x0000060300000000</id>
+        <postprocfile_num>1</postprocfile_num>
+        <postprocfile name="mfnr5.2.xml">
+            <param>cap1_bokeh</param>
+        </postprocfile>
+    </scenario>
+    <scenario alia="prv2_panorama">
+        <id>0x0000030400000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="wechat_prv1">
+        <id>0x0001020000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="wechat_prv2">
+        <id>0x0001030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="qq_prv2">
+        <id>0x0002030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="tiktok_prv1">
+        <id>0x0003020000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="tiktok_prv2">
+        <id>0x0003030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="kuaishou_prv2">
+        <id>0x0004030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="snapchat_prv2">
+        <id>0x0005030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="facebook_prv2">
+        <id>0x0006030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="facebook_cap1">
+        <id>0x0006060000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="facebook_cap2">
+        <id>0x0006070000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="whatsapp_prv2">
+        <id>0x0007030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="messenger_prv2">
+        <id>0x0009030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="messenger_cap1">
+        <id>0x0009060000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="messenger_cap2">
+        <id>0x0009070000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="thirdapp_prv1">
+        <id>0x000A020000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="thirdapp_prv2">
+        <id>0x000A030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="thirdapp_video2">
+        <id>0x000A0B0000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="instagram_prv2">
+        <id>0x0008030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="prv1_professional">
+        <id>0x0000020500000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="prv2_professional">
+        <id>0x0000030500000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="prv2_qrcode">
+        <id>0x0000030E00000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="video2_timelapsephotography">
+        <id>0x00000B1000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+    <scenario alia="top-app-meiyan_prv2">
+        <id>0x0012030000000000</id>
+        <postprocfile_num>0</postprocfile_num>
+    </scenario>
+</postproc_cfg>

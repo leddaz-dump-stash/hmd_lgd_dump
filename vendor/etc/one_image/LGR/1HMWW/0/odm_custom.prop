@@ -1,0 +1,15 @@
+# Project name: LGR
+# Local skuid : 1HMWW
+# override system properties begin ###############
+
+# Device name, product name, model name for vendor
+ro.product.vendor.device=LGR
+ro.product.vendor.name=LegendPro_HMWW
+ro.product.vendor.model=M-KOPA X20
+
+# Fingerprint for vendor
+ro.vendor.build.fingerprint=HMD/LegendPro_00EEA/LGR:14/UP1A.231005.007/00WW_1_520:user/release-keys
+
+# Extra vendor partition properties part.
+ro.vendor.keybox.id.value=HMD_LGR
+# End of skuid system properties!

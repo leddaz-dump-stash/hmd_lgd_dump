@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+    <GlobalInitInfo>
+        <aperture>5</aperture><!-- 虚化强度，取值范围0~8 -->
+        <blur_bar>1</blur_bar><!-- 是否打开aperture进度条，1：打开aperture进度条；0：关闭aperture进度条 -->
+        <cameraDirection>1</cameraDirection> <!-- 主副摄相机的相对位置 [0,1,2,3]-->
+        <logEnable>1</logEnable>  <!-- log打印开关 -->
+        <visionEnable>0</visionEnable> <!-- 打开可视化 0: disable 1: enable -->
+    </GlobalInitInfo>
+<!-- preview project -->
+    <PreviewInitInfo>
+        <DepthW>200</DepthW> <!-- high[256,192], mid[256,192], low[200,150] -->
+        <DepthH>150</DepthH>
+        <portraitMaskEnable>1</portraitMaskEnable> <!-- 打开人像mask功能 0: disable 1: enable -->
+        <shift_z_scale_rt>1.1</shift_z_scale_rt> <!-- 1.1正常标定  1.5斜对角标定 -->
+        <aperture>5</aperture><!-- 虚化强度，取值范围0~8 -->
+    </PreviewInitInfo>
+
+    <PreviewMainThreadInfo>
+        <plat>0</plat>  <!-- 0: input buf without stride, 1: input buf with stride-->
+        <previewEnable>1</previewEnable> <!-- 打开实时预览 0: disable 1: enable -->
+    </PreviewMainThreadInfo>
+    <PreviewViceThreadInfo>
+        <apt>0.22</apt>  <!-- 取值范围0.1~0.5，默认0.2-->
+        <selfCalib>0</selfCalib>  <!-- 打开自校正 0: disable 1: enable ,默认0-->
+    </PreviewViceThreadInfo>
+<!-- preview project -->
+  
+<!-- disparity project -->
+    <CaptureDepthInfo>
+        <DepthW>800</DepthW> <!-- [1024,768], [960,720], [800,600] [640,480] -->
+        <DepthH>600</DepthH>
+        <OfDepthW>640</OfDepthW> <!-- [1024,768], [960,720], [800,600] [640,480] [512,384] [480,360]-->
+        <OfDepthH>480</OfDepthH>
+        <rectifyBinVer>127</rectifyBinVer>  <!-- 校正bin版本号 -->
+        <dumpDispEnable>0</dumpDispEnable> <!-- dump disp使能 0: disable 1: enable -->
+        <gpuMode>0</gpuMode> <!-- portrait gpu Mode 0: cpu, 1: vulkan, 2: opencl, 3: opengl -->
+        <modelType>1</modelType> <!-- portrait 0:hr 1:erf -->
+
+        <ColorAdjustMode>0</ColorAdjustMode> <!-- 颜色调整模式 0: disable 1: adjust main 2: adjust sub -->
+        <LumaAdjustMode>2</LumaAdjustMode> <!-- 亮度调整模式 0: disable 1: adjust main 2: adjust sub -->
+        <gaussBlurMainEnable>1</gaussBlurMainEnable> <!-- 主图高斯模糊使能 0: disable 1: enable -->
+        <gaussBlurSubEnable>0</gaussBlurSubEnable> <!-- 副图高斯使能 0: disable 1: enable -->
+        <portraitEnable>1</portraitEnable> <!-- 人像mask使能 0: disable 1: enable -->
+        <handEnable>1</handEnable> <!-- 手指优化使能 0: disable 1: enable -->
+        <selfFaceDetect>0</selfFaceDetect> <!-- 人脸检测使能 0: disable 1: enable -->
+        <humanDetect>1</humanDetect> <!-- 行人检测使能 0: disable 1: enable -->
+        <sodEnable>1</sodEnable> <!-- sod使能 0: disable 1: enable -->
+    </CaptureDepthInfo>
+<!-- disparity project -->
+
+<!-- disparity algorithm -->
+    <CaptureDepthAlgoInfo>
+        <zoomScaleFlag>0</zoomScaleFlag> <!-- 设置zoomScale -->
+        <dualWarpEnable>0</dualWarpEnable> <!-- 校正主副图 0: warp sub 1: warp main and sub -->
+        <shiftZscale>1.0</shiftZscale> <!-- shiftZ 1.0-1.5 -->
+
+        <boxSize>240</boxSize> <!-- box尺寸 -->
+        <boxOffset>150</boxOffset> <!-- box偏移值 -->
+
+        <maxDisp>48</maxDisp> <!-- 最大视差 24-48 -->
+        <sparseMode>4</sparseMode> <!-- sparse工作模式 0-15 -->
+        <confTh>16</confTh> <!-- 置信度阈值 0-128 -->
+        <weightLut>1</weightLut> <!-- 权值表 0-1 -->
+
+        <iterMode>1</iterMode> <!-- 迭代模式 0-1 -->
+        <sorIter>8</sorIter> <!-- sor 迭代次数 5-10 -->
+
+        <faceCnt>4</faceCnt> <!-- 人脸个数 -->
+        <dispOffsetRatio>0.15</dispOffsetRatio> <!-- 视差补偿值比率 -->
+        <dispOffsetTh>1.5</dispOffsetTh> <!-- 视差补偿值阈值 -->
+        <highRatio>0.4</highRatio> <!-- 人像mask 视差比率 -->
+        <highThresh>6</highThresh> <!-- 人像mask 视差阈值 -->
+        <faceBlockRatio>0.6</faceBlockRatio> <!-- 人脸框外扩的比率 -->
+        <portraitAreaThHigh>0.1</portraitAreaThHigh> <!-- 人像mask最小块尺寸 -->
+    </CaptureDepthAlgoInfo>
+<!-- disparity algorithm -->
+
+<!-- blur project -->
+    <BlurBaseInfo>
+        <bokehsize>1200</bokehsize> <!-- 用于虚化的图像的尺寸 -->
+        <lightSpotStrength>0.3</lightSpotStrength><!-- 光斑增强系数,取值范围0.0f~1.0f -->
+        <apt>0.22</apt><!-- 景深大小，取值范围0.1f~0.5f --> 		 
+        <gpuEnable>1</gpuEnable><!-- 0：不使用gpu加速；1：使用gpu加速 -->
+        <fakeEnable>0</fakeEnable><!--是否打开假虚化/10 [0, 255] -->
+    </BlurBaseInfo>
+<!-- blur project -->
+
+<!-- blur algorithm -->
+    <BlurExtraInfo>
+        <backAptRate>1</backAptRate><!-- 后景深系数，取值范围1~3 -->
+        <foreAptRate>3</foreAptRate><!-- 前景深系数，取值范围1~3 -->
+        <backBlurRate>0.14</backBlurRate><!-- 后景虚化模糊程度系数，取值范围0~1 -->
+        <foreBlurRate>0.12</foreBlurRate><!-- 前景虚化模糊程度系数，取值范围0~1 -->
+        <radiusFilterSize>3</radiusFilterSize><!-- 虚化半径图平滑滤波参数 -->
+        <radiusFilterSigma>3</radiusFilterSigma><!-- 虚化半径图平滑参数sigma -->
+    </BlurExtraInfo>
+<!-- blur algorithm -->
+	
+</Config>

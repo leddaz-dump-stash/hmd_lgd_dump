@@ -1,0 +1,5 @@
+service hal_hmd_settings_status  /vendor/bin/hw/vendor.hmd.hardware.hmdSettingsStatus-service
+    class hal
+    user root
+    group root system
+

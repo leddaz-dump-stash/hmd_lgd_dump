@@ -1,0 +1,31 @@
+<displayConfiguration>
+    <densityMapping>
+         <density>
+            <height>1080</height>
+            <width>2400</width>
+            <density>480</density>
+         </density>
+         <density>
+            <height>1080</height>
+            <width>2408</width>
+            <density>480</density>
+         </density>
+         <!--modified by yangxueju for LGD-494 Density config begin-->
+         <density>
+            <height>720</height>
+            <width>1640</width>
+            <density>280</density>
+         </density>
+         <density>
+            <height>720</height>
+            <width>1600</width>
+            <density>280</density>
+         </density>
+         <density>
+            <height>720</height>
+            <width>1612</width>
+            <density>280</density>
+         </density>
+         <!--modified by yangxueju for LGD-494 Density config end-->
+    </densityMapping>
+</displayConfiguration>

@@ -1,0 +1,15 @@
+# Project name: LGP
+# Local skuid : 100WW
+# override system properties begin ###############
+
+# Device name, product name, model name for vendor
+ro.product.vendor.device=LGP
+ro.product.vendor.name=LegendPlus_0AWW
+ro.product.vendor.model=HMD Pulse Plus
+
+# Fingerprint for vendor
+ro.vendor.build.fingerprint=HMD/LegendPlus_00EEA/LGP:14/UP1A.231005.007/00WW_1_520:user/release-keys
+
+# Extra vendor partition properties part.
+ro.vendor.keybox.id.value=HMD_LGP
+# End of skuid system properties!

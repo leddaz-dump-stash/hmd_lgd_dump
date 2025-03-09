@@ -1,0 +1,24 @@
+service vendor.engpcclientlte /vendor/bin/engpc
+    class core
+    user root
+    group system radio shell net_bt_admin input audio wifi media camera nfc
+    oneshot
+
+on property:vendor.flag.engpc.restart=1
+    restart vendor.engpcclientlte
+
+#Added by yangyunhai@sagereal.com for LGD-686 [SSW-034] SoC Diagnostics Locking begin
+# on property:vendor.ro.bootmode=cali && property:vendor.flag.sys.usb.config=1
+on property:vendor.ro.bootmode=cali && property:vendor.flag.sys.usb.config=1 && property:ro.boot.cali=1
+     setprop sys.usb.config vser
+ 
+# on property:vendor.ro.bootmode=cali && property:sys.usb.state=vser
+on property:vendor.ro.bootmode=cali && property:sys.usb.state=vser && property:ro.boot.cali=1
+#Added by yangyunhai@sagereal.com for LGD-686 [SSW-034] SoC Diagnostics Locking end
+    setprop vendor.sys.usb.state vser
+
+on property:vendor.ro.bootmode=cali && property:vendor.flag.sys.5gusb.config=1
+    setprop sys.usb.config vser,gser
+
+on property:vendor.ro.bootmode=cali && property:sys.usb.state=vser,gser
+    setprop vendor.sys.usb.state vser,gser

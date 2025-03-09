@@ -1,0 +1,9 @@
+service vendor.fingerprint-default /vendor/bin/hw/android.hardware.biometrics.fingerprint-service
+    class late_start
+    user system
+    group system input uhid
+    disabled
+
+on property:ro.vendor.fps.support=true
+    start vendor.fingerprint-default
+
